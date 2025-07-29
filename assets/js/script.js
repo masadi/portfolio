@@ -10,9 +10,6 @@ $('#orderModal').on('show.bs.modal', function (event) {
 })
 $("#orderForm").validate({
     rules: {
-        paket:{
-            required: true
-        },
         nama: {
             required: true
         },
