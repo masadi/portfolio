@@ -6,9 +6,13 @@ $('#orderModal').on('show.bs.modal', function (event) {
     var produk = button.data('produk')
     var modal = $(this)
     modal.find('.modal-title').text(`Order e-Presensi (Paket ${firstUppercase(produk)})`)
+    $('#paket').val(produk)
 })
 $("#orderForm").validate({
     rules: {
+        paket:{
+            required: true
+        },
         nama: {
             required: true
         },
