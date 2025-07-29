@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>Pilih Paket | e-Presensi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+        }
+
+        .hw-18 {
+            height: 18px !important;
+            min-width: 18px !important;
+            width: 18px !important;
+        }
+
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+
+        .border {
+            border: 1px solid #cbd5e1 !important;
+        }
+
+        .badge-light {
+            color: #101729;
+            background-color: #f1f4f9;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: .25em .4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .say-yes:before {
+            content: "";
+            vertical-align: middle;
+            display: inline-block;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2314b89c' d='M9.707 19.121a.997.997 0 01-1.414 0l-5.646-5.647a1.5 1.5 0 010-2.121l.707-.707a1.5 1.5 0 012.121 0L9 14.171l9.525-9.525a1.5 1.5 0 012.121 0l.707.707a1.5 1.5 0 010 2.121z'/%3E%3C/svg%3E");
+        }
+
+        .say-yes,
+        .say-yes:before {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+
+        .say-yes {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-white {
+            border: 1px solid #cbd5e1;
+            background-color: #fff;
+        }
+
+        .mt-3,
+        .my-3 {
+            margin-top: 1rem !important;
+        }
+
+        .btn-group-sm>.btn,
+        .btn-sm {
+            padding: .7rem 1.55rem;
+            font-size: .875rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .table.table-lg td,
+        .table.table-lg th {
+            padding: 1rem .75rem;
+        }
+
+        .table.table-lg td,
+        .table.table-lg th {
+            padding: 1rem .75rem;
+        }
+
+        .table-borderless tbody+tbody,
+        .table-borderless td,
+        .table-borderless th,
+        .table-borderless thead th {
+            border: 0;
+        }
+
+        .error {
+            color: #dc3545 !important;
+        }
+        ul {
+            margin-bottom: 0px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-responsive-lg aos-init aos-animate" data-aos="fade-up">
+            <table class="table table-lg table-hover table-borderless bg-white">
+                <thead class="border-bottom">
+                    <tr class="text-center">
+                        <th scope="col" class="text-left">
+                            <div class="mb-5">
+                                <div class="h4 font-weight-bold">Pilih Paket</div>
+                                <p class="font-weight-normal text-muted font-size-sm d-lg-none">Scroll to view more
+                                    plans --&gt;</p>
+                            </div>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <div class="h4 font-weight-bold mb-0">Free</div>
+                            <p class="font-weight-normal text-muted">Gratis Selamanya</p>
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="free">Order</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <div class="h4 font-weight-bold mb-0">Basic</div>
+                            <p class="font-weight-normal text-muted">Rp. 500K.000/Tahun</p>
+                            <a href="javascript:;" class="btn btn-primary btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="basic">Order</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <div class="h4 font-weight-bold mb-0">Standard</div>
+                            <p class="font-weight-normal text-muted">Rp. 1.000K.000/Tahun</p>
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="standard">Order</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <div class="h4 font-weight-bold mb-0">Pro</div>
+                            <p class="font-weight-normal text-muted">Hubungi Kami</p>
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="pro">Order</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-bottom bg-light">
+                        <th scope="row" class="h6 py-3 font-weight-semibold text-nowrap border-0 mb-0">Data Referensi
+                        </th>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                    </tr>
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Siswa</th>
+                        <td class="text-center">20</td>
+                        <td class="text-center">500</td>
+                        <td class="text-center">1000</td>
+                        <td class="text-center">Unlimited</td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Guru</th>
+                        <td class="text-center">1</td>
+                        <td class="text-center">Unlimited</td>
+                        <td class="text-center">Unlimited</td>
+                        <td class="text-center">Unlimited</td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Kelas</th>
+                        <td class="text-center">1</td>
+                        <td class="text-center">Unlimited</td>
+                        <td class="text-center">Unlimited</td>
+                        <td class="text-center">Unlimited</td>
+                    </tr>
+
+                    <tr class="border-top border-bottom bg-light">
+                        <th scope="row" class="h6 py-3 font-weight-semibold border-0 mb-0">Fitur & Layanan</th>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Presensi dengan QrCode</th>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Presensi dengan Handphone</th>
+                        <td class="text-center"><span class="say-yes"></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Izin Siswa & Guru</th>
+                        <td class="text-center"><span class="say-yes"></td>
+                        <td class="text-center"><span class="say-yes"></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">QrCode Izin Siswa</th>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></td>
+                        <td class="text-center"><span class="say-yes"></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr class="border-top border-bottom bg-light">
+                        <th scope="row" class="h6 py-3 font-weight-semibold border-0 mb-0">Laporan</th>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Laporan Harian</th>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Laporan Bulanan</th>
+                        <td class="text-center">-</td>
+                        <td class="text-center">150</td>
+                        <td class="text-center">200</td>
+                        <td class="text-center">Unlimited</td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Laporan Per Semester</th>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Laporan Per Tahun Ajaran
+                            <span class="badge badge-light border rounded-circle hw-18" data-toggle="popover"
+                                role="button" data-trigger="hover" data-placement="top"
+                                data-content="Group Messaging is characterized by an SMS conversation among 3 or more recipients at the same time."
+                                data-original-title="" title="">?</span>
+                        </th>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr class="border-top border-bottom bg-light">
+                        <th scope="row" class="h6 py-3 font-weight-semibold border-0 mb-0">Rekapitulasi</th>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Rekapitulasi Harian</th>
+                        <td class="text-center">10</td>
+                        <td class="text-center">50</td>
+                        <td class="text-center">Unlimited</td>
+                        <td class="text-center">Unlimited</td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Rekapitulasi Bulanan
+                            <span class="badge badge-light border rounded-circle hw-18" data-toggle="popover"
+                                role="button" data-trigger="hover" data-placement="top"
+                                data-content="Group Messaging is characterized by an SMS conversation among 3 or more recipients at the same time."
+                                data-original-title="" title="">?</span>
+                        </th>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Rekapitulasi Per Semester
+                            <span class="badge badge-light border rounded-circle hw-18" data-toggle="popover"
+                                role="button" data-trigger="hover" data-placement="top"
+                                data-content="Group Messaging is characterized by an SMS conversation among 3 or more recipients at the same time."
+                                data-original-title="" title="">?</span>
+                        </th>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Rekapitulasi Per Tahun Ajaran</th>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr class="border-top border-bottom bg-light">
+                        <th scope="row" class="h6 py-3 font-weight-semibold border-0 mb-0">Whatsapp API</th>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                        <td class="py-3 border-0"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Nomor Whatsapp</th>
+                        <td class="text-center">1</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">5</td>
+                        <td class="text-center">10</td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Notifikasi ke Wali</th>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th class="font-weight-normal" scope="row">Webhook</th>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                        <td class="text-center"><span class="say-yes"></span></td>
+                    </tr>
+
+                    <tr class="text-center bg-white">
+                        <th scope="col"></th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="free">Get Free</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="basic">Get Basic</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <a href="javascript:;" class="btn btn-primary btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="standard">Get Standard</a>
+                        </th>
+                        <th scope="col" class="text-center text-nowrap">
+                            <a href="javascript:;" class="btn btn-white btn-sm waves-effect mt-3" role="button"
+                                data-toggle="modal" data-target="#orderModal" data-produk="pro">Get Pro</a>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order e-Presensi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="orderForm">
+                    <div class="modal-body">
+                        <div class="alert alert-danger d-none" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="form-group">
+                            <label for="nama" class="col-form-label">Nama Sekolah</label>
+                            <input type="text" class="form-control" id="nama" name="nama">
+                        </div>
+                        <div class="form-group">
+                            <label for="npsn" class="col-form-label">NPSN</label>
+                            <input type="text" class="form-control" id="npsn" name="npsn">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat" class="col-form-label">Alamat Sekolah</label>
+                            <input type="text" class="form-control" id="alamat" name="alamat">
+                        </div>
+                        <div class="form-group">
+                            <label for="admin" class="col-form-label">Nama Admin Sekolah</label>
+                            <input type="text" class="form-control" id="admin" name="admin">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label">Nomor Whatsapp Admin Sekolah</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="submitButton"
+                            data-loading-text="Mohon menunggu...">Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
