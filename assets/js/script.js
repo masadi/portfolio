@@ -43,38 +43,10 @@ $("#orderForm").validate({
         }
     },
     submitHandler: function (form) {
-        // some other code
-        // maybe disabling submit button
-        // then:
         var $button = $('#submitButton');
         var originalText = $button.html();
         $button.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ' + $button.data('loading-text'));
-        /*$.ajax({
-            url: 'https://presensi.test/api/checkout',
-            type: 'POST',
-            data: $(form).serialize(),
-            success: function (response) {
-                // Handle successful response
-                console.log('Success:', response);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error('AJAX Error:', textStatus, errorThrown);
-                console.error('Response Text:', jqXHR.responseText);
-                console.error('Status Code:', jqXHR.status);
-
-                // Example: Handle specific HTTP status codes
-                if (jqXHR.status === 422) { // Unprocessable Entity (e.g., validation errors)
-                    var errors = jqXHR.responseJSON.errors;
-                    // Display validation errors to the user
-                    console.log('Validation Errors:', errors);
-                } else if (jqXHR.status === 419) { // CSRF token mismatch
-                    alert('Session expired or CSRF token mismatch. Please refresh the page.');
-                } else {
-                    alert('An unexpected error occurred. Please try again.');
-                }
-            }
-        });*/
-        $.post('https://presensi.test/api/checkout', $(form).serialize()).done(function (response) {
+        $.post('https://presensi.mas-adi.net/api/checkout', $(form).serialize()).done(function (response) {
             const errors = [];
             console.log(response);
             $button.prop('disabled', false).html(originalText);
